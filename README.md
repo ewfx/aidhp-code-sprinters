@@ -19,12 +19,21 @@ We follow a simple yet powerful mantra:
 
 **Data + Interactions = Recommendations + Actionable Insights**  
 
-Traditional systems struggle with contextual relationships and suffer from the cold-start problem. To overcome this, we leverage **Large Language Models (LLMs)** to build scalable personalization engines.**Explainability** is at the core of our system, providing clear, data-driven reasoning behind every product or service recommendation for our banking customers.
-
+Traditional systems struggle with contextual relationships and suffer from the cold-start problem. To overcome this, we leverage **Large Language Models (LLMs)** to build scalable personalization engines.**Explainability** is at the core of our system, providing clear, data-driven reasoning behind every product or service recommendation for our banking customers. Major computational tasks are offloaded as scheduled jobs, running periodically outside business hours to enhance reliability and minimize latency.  
 ---
+## 🎥 Demo
+🔗 [Live Demo](#) (if applicable)  
+📹 [Video Demo](#) (if applicable)  
+🖼️ Screenshots:
 
-## Why Choose Us?  
+![Screenshot 1](link-to-image)
 
+## 💡 Inspiration
+LLMs have transformed application development, shifting from **keyword-based search to contextual search**, unlocking new ways to solve problems. A key focus area is **customer engagement**, which directly drives business growth. However, this shift brings challenges such as **scalability, explainability, and real-time processing**. Our goal is to embrace this evolution while proactively addressing these challenges to deliver innovative, efficient solutions.  
+
+
+## ⚙️ What It Does
+  
 ### 1. Recommendations for You  
 Get **personalized financial product suggestions** tailored to your **spending habits, transactions, and financial profile**, ensuring you make the best investment and savings decisions.  
 
@@ -38,23 +47,7 @@ Discover the **best available healthcare services and financial plans** based on
 Ask about any financial product, and our **Fargo AI** will instantly analyze your needs to provide **smart, relevant recommendations** in a conversational manner.  
 
 ### 5. Boost Outreach with AI-Driven Recommendations  
-Analyze **social media data** to deliver **personalized product suggestions** and **empower customer service** for impactful engagement.  
-
-
-
-## 🎥 Demo
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
-🖼️ Screenshots:
-
-![Screenshot 1](link-to-image)
-
-## 💡 Inspiration
-LLMs have transformed application development, shifting from **keyword-based search to contextual search**, unlocking new ways to solve problems. A key focus area is **customer engagement**, which directly drives business growth. However, this shift brings challenges such as **scalability, explainability, and real-time processing**. Our goal is to embrace this evolution while proactively addressing these challenges to deliver innovative, efficient solutions.  
-
-
-## ⚙️ What It Does
-Explain the key features and functionalities of your project.
+Analyze **social media data** to deliver **personalized product suggestions** and **empower customer service** for impactful engagement. 
 
 ## 🛠️ How We Built It
 Briefly outline the technologies, frameworks, and tools used in development.
