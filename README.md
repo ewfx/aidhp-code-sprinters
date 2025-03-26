@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀Modern Personalization Platform: AI-Driven Contextual Engagement and outreach
 
 ## 📌 Table of Contents
 - [Introduction](#introduction)
@@ -139,4 +139,4 @@ This approach enabled **efficient data handling and enhanced recommendation accu
 
 ## 👥 Team
 - **Murali** - [GitHub](https://github.com/MuraliB123) | [LinkedIn](https://www.linkedin.com/in/muralib1729)  
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+- **Poojaa S** - [GitHub](#) | [LinkedIn](#)
