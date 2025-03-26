@@ -25,7 +25,7 @@ Major computational tasks are offloaded as scheduled jobs, running periodically 
 
 ---
 ## 🎥 Demo
-🔗 [Live Demo](#) (if applicable)  
+[Live Demo](https://drive.google.com/file/d/1SHHJPrF3cci9GzqY4Z8p1HhokKAWsVv8/view?usp=sharing)
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
