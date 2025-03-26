@@ -14,7 +14,19 @@
 ---
 
 ## 🎯 Introduction
-A brief overview of your project and its purpose. Mention which problem statement are your attempting to solve. Keep it concise and engaging.
+Our approach to personalisation is based on following mantra *data + interactions = recomendations + actionable insights* . Tradional systems fail to understand contextual relationships and suffers from cold-start problem. Hence We utilised Large Language Models to build scalable personalisation engines. Explainability is kept in the core of the system adding reasoning explanations behing each product/service we recommends to our banking customers.
+Why choose us ?
+1. Recommendations for You
+Get personalized financial product suggestions tailored to your spending habits, transactions and financial profile ensuring you make the best investment and savings decisions.
+2. For the People You Love
+Receive curated financial recommendations for your spouse, parents, or children using relationship-based insights and advanced graph-based TF-IDF models.
+3. Health Care Services
+Discover the best available healthcare services and financial plans based on your profile, helping you make informed medical and insurance decisions.
+4. Conversational Search Enginer
+Ask about any financial product, and our Fargo AI will instantly analyze your needs to provide smart, relevant recommendations in a conversational manner.
+5. Boost outreach with AI-driven recommendations
+Analyze social media data to deliver personalized product suggestions and empower customer service for impactful engagement.
+
 
 ## 🎥 Demo
 🔗 [Live Demo](#) (if applicable)  
