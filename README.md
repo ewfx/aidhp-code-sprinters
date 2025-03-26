@@ -137,4 +137,6 @@ This approach enabled **efficient data handling and enhanced recommendation accu
 
 ## 👥 Team
 - **Murali** - [GitHub](https://github.com/MuraliB123) | [LinkedIn](https://www.linkedin.com/in/muralib1729)  
-- **Poojaa S** - [GitHub](#) | [LinkedIn](#)
+- **Poojaa S** - [GitHub](https://github.com/poojaa1908) | [LinkedIn](https://www.linkedin.com/in/poojaa-s)
+- **Sawthisri** - [Github](https://github.com/SwathishriJL) | [LinkedIn](https://www.linkedin.com/in/swathishri-jaisankar/)
+- **Nithin** - [Linkedin](https://www.linkedin.com/in/nithin-srivatsan-0a885b236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
