@@ -19,7 +19,7 @@ We follow a simple yet powerful mantra:
 
 **Data + Interactions = Recommendations + Actionable Insights**  
 
-Traditional systems struggle with contextual relationships and suffer from the cold-start problem. To overcome this, we leverage **Large Language Models (LLMs)** to build scalable personalization engines. **Explainability** is at the core of our system, providing reasoning behind every product or service recommendation for our banking customers.  
+Traditional systems struggle with contextual relationships and suffer from the cold-start problem. To overcome this, we leverage **Large Language Models (LLMs)** to build scalable personalization engines.**Explainability** is at the core of our system, providing clear, data-driven reasoning behind every product or service recommendation for our banking customers.
 
 ---
 
