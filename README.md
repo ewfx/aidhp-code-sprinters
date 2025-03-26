@@ -27,7 +27,7 @@ Major computational tasks are offloaded as scheduled jobs, running periodically 
 ## 🎥 Demo
 [Video Demo](https://drive.google.com/file/d/1SHHJPrF3cci9GzqY4Z8p1HhokKAWsVv8/view?usp=sharing)
 
-![Screenshot 1](link-to-image)
+
 
 ## 💡 Inspiration
 LLMs have transformed application development, shifting from **keyword-based search to contextual search**, unlocking new ways to solve problems. A key focus area is **customer engagement**, which directly drives business growth. However, this shift brings challenges such as **scalability, explainability, and real-time processing**. Our goal is to embrace this evolution while proactively addressing these challenges to deliver innovative, efficient solutions.  
