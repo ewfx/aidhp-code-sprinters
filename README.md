@@ -50,7 +50,8 @@ Analyze **social media data** to deliver **personalized product suggestions** an
 ![Screenshot 1](link-to-image)
 
 ## 💡 Inspiration
-What inspired you to create this project? Describe the problem you're solving.
+LLMs have transformed application development, shifting from **keyword-based search to contextual search**, unlocking new ways to solve problems. A key focus area is **customer engagement**, which directly drives business growth. However, this shift brings challenges such as **scalability, explainability, and real-time processing**. Our goal is to embrace this evolution while proactively addressing these challenges to deliver innovative, efficient solutions.  
+
 
 ## ⚙️ What It Does
 Explain the key features and functionalities of your project.
