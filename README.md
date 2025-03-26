@@ -1,4 +1,4 @@
-# 🚀Modern Personalization Platform: AI-Driven Contextual Engagement and outreach
+# Modern Personalization Engine As a Service
 
 ## 📌 Table of Contents
 - [Introduction](#introduction)
