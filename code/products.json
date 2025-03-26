@@ -1,0 +1,330 @@
+{
+    "financial_products": [
+      {
+        "category": "deposit_accounts",
+        "products": [
+          {
+            "name": "Savings Account",
+            "about": "A secure bank account that earns interest on deposits while allowing easy access to funds.",
+            "eligible_customers": "Individuals above 18 years; minors with a guardian.",
+            "target_customers": "Salaried employees, self-employed professionals, students, homemakers, and retirees."
+          },
+          {
+            "name": "Current Account",
+            "about": "A bank account designed for frequent transactions, offering higher withdrawal limits and overdraft facilities.",
+            "eligible_customers": "Business owners, entrepreneurs, professionals, and companies.",
+            "target_customers": "Small businesses, startups, corporates, and high-volume transaction users."
+          },
+          {
+            "name": "Fixed Deposit (FD)",
+            "about": "A time-bound deposit where money is locked in for a fixed period, earning higher interest than a savings account.",
+            "eligible_customers": "Individuals, businesses, senior citizens, and minors with a guardian.",
+            "target_customers": "Investors seeking secure and predictable returns with minimal risk."
+          },
+          {
+            "name": "Recurring Deposit (RD)",
+            "about": "A deposit scheme allowing users to invest a fixed amount monthly, earning interest over time.",
+            "eligible_customers": "Salaried individuals, students, and investors with stable income.",
+            "target_customers": "People looking for disciplined savings with assured returns."
+          }
+        ]
+      },
+      {
+        "category": "credit_loan_products",
+        "products": [
+          {
+            "name": "Home Loan",
+            "about": "A secured loan to finance the purchase, renovation, or construction of a house.",
+            "eligible_customers": "Salaried employees, self-employed professionals, NRIs, and business owners with stable income.",
+            "tenure": "Up to 30 years",
+            "interest_rate": "6.5% - 10% per annum (varies by bank and applicant profile)",
+            "loan_amount": "Based on applicant’s income and property value",
+            "common_use_cases": "Buying a new home, constructing a house, renovating an existing home."
+          },
+          {
+            "name": "Auto Loan",
+            "about": "A secured loan to purchase a new or used vehicle, with structured EMI repayments.",
+            "eligible_customers": "Salaried individuals, self-employed professionals, and businesses with a stable income source.",
+            "tenure": "Up to 7 years",
+            "interest_rate": "7% - 12% per annum",
+            "loan_amount": "Up to 90% of the vehicle’s on-road price",
+            "common_use_cases": "Purchasing a new or used car, bike, or commercial vehicle."
+          },
+          {
+            "name": "Personal Loan",
+            "about": "An unsecured loan available for various personal expenses, requiring minimal documentation.",
+            "eligible_customers": "Salaried and self-employed individuals with a good credit score.",
+            "tenure": "1 to 7 years",
+            "interest_rate": "10% - 18% per annum",
+            "loan_amount": "Varies based on income and credit profile",
+            "common_use_cases": "Medical emergencies, wedding expenses, travel, home renovation, and debt consolidation."
+          },
+          {
+            "name": "Education Loan",
+            "about": "A loan designed to finance higher education expenses, covering tuition fees and other costs.",
+            "eligible_customers": "Students with confirmed admission to recognized institutions; co-applicant (parent/guardian) required.",
+            "tenure": "5 to 15 years",
+            "interest_rate": "8% - 12% per annum",
+            "loan_amount": "Depends on course and institution; up to INR 20 lakh without collateral, higher with collateral.",
+            "common_use_cases": "Funding higher education in India or abroad, covering tuition fees, books, living expenses."
+          },
+          {
+            "name": "Gold Loan",
+            "about": "A secured loan where gold jewelry or coins are pledged as collateral for instant cash.",
+            "eligible_customers": "Individuals owning gold assets with proper documentation.",
+            "tenure": "Up to 3 years",
+            "interest_rate": "7% - 15% per annum",
+            "loan_amount": "Up to 75% of the gold’s market value",
+            "common_use_cases": "Short-term cash needs, business expansion, emergency expenses."
+          },
+          {
+            "name": "Loan Against Fixed Deposits",
+            "about": "A secured loan taken against an existing fixed deposit, offering lower interest rates.",
+            "eligible_customers": "Fixed deposit holders with banks/NBFCs.",
+            "tenure": "Linked to FD maturity",
+            "interest_rate": "1% - 2.5% above the FD rate",
+            "loan_amount": "Up to 90% of FD value",
+            "common_use_cases": "Emergency funds without breaking FD, business needs, large purchases."
+          },
+          {
+            "name": "Business Loan",
+            "about": "A loan designed for businesses to fund working capital, expansion, or equipment purchase.",
+            "eligible_customers": "Entrepreneurs, startups, and established businesses with proven financial records.",
+            "tenure": "1 to 10 years",
+            "interest_rate": "10% - 20% per annum",
+            "loan_amount": "Based on business turnover, creditworthiness, and collateral.",
+            "common_use_cases": "Business expansion, purchasing machinery, increasing working capital."
+          }
+        ]
+      },
+      {
+        "category": "investment_wealth_management",
+        "products": [
+          {
+            "name": "Mutual Funds",
+            "about": "A professionally managed investment vehicle that pools money from multiple investors to invest in stocks, bonds, or other securities. Offers diversification and professional fund management.",
+            "eligible_customers": "Individuals above 18 years with a valid bank account and KYC compliance.",
+            "target_customers": "Investors looking for long-term wealth growth, tax-saving options, or diversification.",
+            "types": {
+              "Equity Mutual Funds": "Invest primarily in stocks and equities with high growth potential but higher risk.",
+              "Debt Mutual Funds": "Invest in fixed-income securities like bonds and government securities with lower risk.",
+              "Index Funds": "Track a market index such as NIFTY or SENSEX, offering passive investment options.",
+              "ELSS (Equity Linked Savings Scheme)": "A tax-saving mutual fund with a lock-in period of 3 years, offering high returns."
+            },
+            "minimum_investment": "As low as ₹500 for SIP (Systematic Investment Plan); ₹5,000 for lump sum investments.",
+            "risk_level": "Varies by fund type (Equity - High, Debt - Low to Moderate, Hybrid - Balanced).",
+            "returns": "Market-linked returns, typically ranging from 6% to 15% per annum.",
+            "lock_in_period": "Only for ELSS funds (3 years), while other funds are redeemable anytime."
+          },
+          {
+            "name": "Stock Trading & Demat Account",
+            "about": "A digital account that holds and manages shares and securities electronically for stock market trading. Required for buying, selling, and holding stocks in the secondary market.",
+            "eligible_customers": "Individuals above 18 years with valid KYC documents, PAN card, and linked bank account.",
+            "target_customers": "Retail investors, active traders, and long-term stock market investors.",
+            "account_types": {
+              "Trading Account": "Used for buying and selling shares in stock exchanges like NSE and BSE.",
+              "Demat Account": "Holds stocks, mutual funds, ETFs, and bonds in digital format."
+            },
+            "minimum_investment": "No fixed minimum, but brokerage fees apply on each trade.",
+            "risk_level": "High, as returns depend on market fluctuations.",
+            "returns": "Market-dependent; varies based on stock performance and investment strategy.",
+            "lock_in_period": "No lock-in period, but intraday traders must settle positions within the same trading day."
+          }
+        ]
+      },
+    {
+        "category": "insurance_protection_plans",
+        "products": [
+          {
+            "name": "Life Insurance",
+            "about": "Provides financial security to beneficiaries in case of the policyholder’s death. Some policies also offer investment and savings benefits.",
+            "eligible_customers": "Individuals aged 18 to 65 years, depending on the policy type.",
+            "target_customers": "Individuals with dependents, working professionals, parents, and business owners.",
+            "types": {
+              "Term Life Insurance": {
+                "description": "A pure protection plan that offers a fixed payout to beneficiaries upon death of the insured within the policy term.",
+                "benefits": "Low premiums, high coverage, tax benefits under Section 80C.",
+                "exclusions": "No maturity benefits if the policyholder survives the term."
+              },
+              "Whole Life Insurance": {
+                "description": "Covers the policyholder for their entire lifetime and includes a savings component.",
+                "benefits": "Lifelong coverage, cash value accumulation, tax benefits.",
+                "exclusions": "Higher premiums compared to term insurance."
+              },
+              "Endowment Plans": {
+                "description": "Combines life insurance with savings, paying a lump sum on policy maturity.",
+                "benefits": "Guaranteed returns, lump-sum payout on survival or death, disciplined savings.",
+                "exclusions": "Lower returns compared to market-linked investments."
+              },
+              "Unit Linked Insurance Plans (ULIPs)": {
+                "description": "Insurance plans with an investment component where premiums are partially invested in market securities.",
+                "benefits": "Market-linked growth, flexibility in investment choices, tax benefits.",
+                "exclusions": "Higher charges, returns subject to market risks."
+              }
+            },
+            "premium_determination": "Based on age, health, sum assured, policy term, and lifestyle habits."
+          },
+          {
+            "name": "Health Insurance",
+            "about": "A policy that covers medical expenses related to hospitalization, treatments, and preventive healthcare.",
+            "eligible_customers": "Individuals aged 18 to 65 years; family plans cover dependent children and senior citizens.",
+            "target_customers": "Families, working professionals, senior citizens, and individuals seeking financial security for medical emergencies.",
+            "types": {
+              "Individual Health Insurance": {
+                "description": "Covers medical expenses of a single individual under the policy.",
+                "benefits": "Customizable coverage, hospitalization expenses, pre- and post-hospitalization coverage.",
+                "exclusions": "Pre-existing diseases may have a waiting period."
+              },
+              "Family Floater Plans": {
+                "description": "A single policy covering all family members under a shared sum insured.",
+                "benefits": "Cost-effective, shared coverage, tax benefits.",
+                "exclusions": "Coverage limit shared among all members."
+              },
+              "Critical Illness Insurance": {
+                "description": "Provides a lump sum payout upon diagnosis of specific serious illnesses.",
+                "benefits": "One-time payout for major diseases like cancer, heart attack, and kidney failure.",
+                "exclusions": "Does not cover minor illnesses or pre-existing conditions within waiting period."
+              },
+              "Senior Citizen Health Insurance": {
+                "description": "Designed for elderly individuals with special coverage for age-related illnesses.",
+                "benefits": "Covers pre-existing diseases, higher sum insured, no-claim bonuses.",
+                "exclusions": "Higher premiums, limited coverage for critical illnesses."
+              }
+            },
+            "premium_determination": "Varies based on age, pre-existing conditions, lifestyle habits, and sum insured."
+          },
+          {
+            "name": "General Insurance",
+            "about": "Insurance that covers assets, travel risks, and unforeseen liabilities such as vehicle damage, property loss, and trip cancellations.",
+            "eligible_customers": "Individuals owning assets like vehicles, homes, or those traveling frequently.",
+            "target_customers": "Vehicle owners, travelers, homeowners, and individuals seeking protection from financial risks.",
+            "types": {
+              "Motor Insurance": {
+                "description": "Covers damages to vehicles and liabilities arising from accidents.",
+                "benefits": "Third-party liability cover, own damage cover, personal accident cover.",
+                "exclusions": "Wear and tear, drunk driving, and unlicensed driving are not covered."
+              },
+              "Travel Insurance": {
+                "description": "Covers trip cancellations, medical emergencies, lost baggage, and flight delays.",
+                "benefits": "Medical expense coverage, emergency evacuation, baggage loss compensation.",
+                "exclusions": "Pre-existing medical conditions, self-inflicted injuries, and extreme sports."
+              },
+              "Home Insurance": {
+                "description": "Protects home structure and contents from damages due to natural disasters, theft, and accidents.",
+                "benefits": "Covers fire, burglary, natural calamities, and structure repairs.",
+                "exclusions": "Wear and tear, willful destruction, and war-related damages."
+              },
+              "Personal Accident Insurance": {
+                "description": "Provides financial support in case of accidental disability or death.",
+                "benefits": "Lump sum payout for accidental death, coverage for permanent/temporary disabilities.",
+                "exclusions": "Self-inflicted injuries, injuries under drug/alcohol influence."
+              }
+            },
+            "premium_determination": "Varies based on asset value, risk assessment, and coverage type."
+          }
+        ]
+      } ,
+      {
+        "category": "cards",
+        "products": [
+          {
+            "name": "Basic Credit Card",
+            "about": "A standard credit card with essential features, suitable for everyday purchases with a predefined credit limit.",
+            "eligible_customers": "Individuals above 18 years with a stable income and fair credit history.",
+            "target_customers": "First-time credit card users, salaried employees, and individuals looking for basic credit access.",
+            "fees": "Annual fee: $0 - $50; Late payment fee: $25",
+            "interest_rate": "18% - 22% APR",
+            "benefits": "Basic rewards program, easy approval, suitable for credit building."
+          },
+          {
+            "name": "Rewards Credit Card",
+            "about": "A credit card that offers reward points on transactions, which can be redeemed for discounts, gift vouchers, or cashback.",
+            "eligible_customers": "Individuals with a good credit score and a consistent spending pattern.",
+            "target_customers": "Frequent shoppers, online buyers, and individuals who want to maximize rewards on their spending.",
+            "fees": "Annual fee: $50 - $100; Late payment fee: $30",
+            "interest_rate": "16% - 20% APR",
+            "benefits": "Earn points on every transaction, exclusive merchant offers, higher rewards on select categories."
+          },
+          {
+            "name": "Travel Credit Card",
+            "about": "A specialized credit card offering benefits like air miles, airport lounge access, and travel insurance.",
+            "eligible_customers": "Individuals with a good credit score and a frequent travel history.",
+            "target_customers": "Frequent flyers, business travelers, and vacationers looking for travel perks.",
+            "fees": "Annual fee: $75 - $150; Foreign transaction fee: 2%-3%",
+            "interest_rate": "15% - 18% APR",
+            "benefits": "Earn air miles, free airport lounge access, travel insurance, zero foreign transaction fees."
+          },
+          {
+            "name": "Cashback Credit Card",
+            "about": "A credit card that provides cashback on specific transactions, reducing overall spending costs.",
+            "eligible_customers": "Individuals with a steady income and a fair credit history.",
+            "target_customers": "Everyday spenders, grocery shoppers, and online buyers looking for savings on transactions.",
+            "fees": "Annual fee: $50 - $120; Late payment fee: $30",
+            "interest_rate": "17% - 21% APR",
+            "benefits": "Up to 5% cashback on specific purchases, no redemption limits, exclusive partner offers."
+          },
+          {
+            "name": "Secured Credit Card",
+            "about": "A credit card backed by a fixed deposit, designed for individuals looking to build or repair their credit history.",
+            "eligible_customers": "Individuals with low or no credit score who can provide a fixed deposit as collateral.",
+            "target_customers": "Students, first-time credit users, and individuals looking to improve their credit score.",
+            "fees": "Annual fee: $0 - $50; Security deposit: $200 - $5,000",
+            "interest_rate": "19% - 24% APR",
+            "benefits": "Credit-building, refundable security deposit, easy approval for low-credit users."
+          },
+          {
+            "name": "Business Credit Card",
+            "about": "A credit card designed for business owners, providing higher limits, expense tracking, and corporate perks.",
+            "eligible_customers": "Business owners, entrepreneurs, and professionals with a registered business entity.",
+            "target_customers": "Startups, SMEs, and corporate professionals needing credit for business expenses.",
+            "fees": "Annual fee: $99 - $250; Late payment fee: $39",
+            "interest_rate": "15% - 18% APR",
+            "benefits": "Higher credit limits, expense tracking tools, employee cards with spending limits."
+          },
+          {
+            "name": "Platinum & Premium Credit Card",
+            "about": "A high-end credit card offering luxury privileges like concierge services, elite rewards, and priority banking benefits.",
+            "eligible_customers": "High-income individuals with an excellent credit score.",
+            "target_customers": "High-net-worth individuals, executives, and premium customers seeking luxury benefits.",
+            "fees": "Annual fee: $300 - $600; Foreign transaction fee: 0%",
+            "interest_rate": "14% - 18% APR",
+            "benefits": "Luxury travel perks, premium concierge services, high rewards on lifestyle spending."
+          },
+          {
+            "name": "Basic Debit Card",
+            "about": "A standard debit card linked to a bank account, allowing direct purchases and ATM withdrawals.",
+            "eligible_customers": "Individuals with an active savings or current account.",
+            "target_customers": "Everyday consumers, students, and salaried individuals looking for cashless transactions.",
+            "fees": "Annual fee: $0 - $10; ATM withdrawal fee (out-of-network): $2 - $5",
+            "benefits": "Secure transactions, ATM access, linked directly to bank balance."
+          },
+          {
+            "name": "Premium Debit Card",
+            "about": "A high-tier debit card offering higher withdrawal limits, lounge access, and exclusive merchant offers.",
+            "eligible_customers": "High-value account holders or individuals with premium bank accounts.",
+            "target_customers": "Affluent individuals and customers who prefer enhanced debit card privileges.",
+            "fees": "Annual fee: $50 - $100; Foreign transaction fee: 2%",
+            "benefits": "Higher withdrawal limits, free lounge access, additional discounts at select merchants."
+          },
+          {
+            "name": "Prepaid Debit Card",
+            "about": "A reloadable card that allows spending up to a pre-loaded amount, without linking to a bank account.",
+            "eligible_customers": "Anyone who wishes to control spending with a prepaid balance.",
+            "target_customers": "Students, travelers, and individuals looking for controlled spending without credit risk.",
+            "fees": "Card issuance fee: $5 - $10; Reload fee: $2 - $5",
+            "benefits": "No overdraft risk, flexible reloading, suitable for budgeting."
+          },
+          {
+            "name": "Virtual Debit Card",
+            "about": "A digital-only debit card designed for online transactions, offering enhanced security features.",
+            "eligible_customers": "Individuals with a savings or current account opting for digital banking.",
+            "target_customers": "Frequent online shoppers, digital banking users, and individuals concerned about payment security.",
+            "fees": "Annual fee: $0 - $5; No foreign transaction fees",
+            "benefits": "Instant issuance, secure online transactions, no physical card needed."
+          }
+        ]
+      }
+        
+    ]
+  }
+  

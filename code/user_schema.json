@@ -1,0 +1,140 @@
+{
+    "Customer": {
+      "customer_id": "65f9a7d5b3e8c92f4c1a1234",
+      "full_name": "Rahul Sharma",
+      "dob": "1998-06-15",
+      "gender": "Male",
+      "marital_status": "Married",
+      "nationality": "Indian",
+      "occupation": "Software Engineer",
+      "industry": "Information Technology",
+      "education_level": "Bachelor's Degree",
+      "employer": {
+        "name": "Tech Solutions Pvt Ltd",
+        "type": "Private"
+      },
+      "annual_income_bracket": "6-10 LPA",
+      "dependents_count": 1,
+      "address": {
+        "city": "Bangalore",
+        "zip_code": "560001",
+        "country": "India"
+      },
+      "phone_number": "+91-9876543210",
+      "email": "rahul.sharma@email.com"
+    },
+    "RelationshipInsights": {
+      "spouse": {
+        "name": "Priya Sharma",
+        "account_id": "65f9a8d5c3e8c92f4c1a5678"
+      },
+      "children": [],
+      "linked_accounts": ["65f9b9e5d4e8c92f4c1b7890"]
+    },
+    "FinancialTransactions": {
+      "deposits_withdrawals": [
+        {
+          "type": "Salary Credit",
+          "amount": 75000,
+          "date": "2025-03-01"
+        },
+        {
+          "type": "UPI Payment",
+          "amount": -2000,
+          "date": "2025-03-10"
+        },
+        {
+          "type": "Online Shopping",
+          "amount": -5000,
+          "date": "2025-03-15"
+        },
+        {
+          "type": "Salary Credit",
+          "amount": 75000,
+          "date": "2025-02-01"
+        },
+        {
+          "type": "Dining",
+          "amount": -3500,
+          "date": "2025-02-12"
+        },
+        {
+          "type": "Grocery",
+          "amount": -7000,
+          "date": "2025-02-20"
+        },
+        {
+          "type": "Salary Credit",
+          "amount": 75000,
+          "date": "2025-01-01"
+        },
+        {
+          "type": "Fuel",
+          "amount": -6000,
+          "date": "2025-01-15"
+        },
+        {
+          "type": "Insurance Payment",
+          "amount": -8000,
+          "date": "2025-01-25"
+        }
+      ],
+      "spending_categories": {
+        "grocery": [7000, 6500, 6000],
+        "dining": [3500, 4000, 4500],
+        "travel_fuel": [6000, 7500, 8000],
+        "entertainment": [3000, 2800, 3200],
+        "shopping": [5000, 7000, 8500],
+        "healthcare": [2500, 3000, 2700],
+        "education": [1500, 1600, 1400]
+      },
+      "bill_payments": {
+        "utilities": [2000, 2100, 2200],
+        "internet": [1200, 1200, 1200],
+        "subscriptions": [800, 850, 900]
+      }
+    },
+    "BankingProducts": {
+      "accounts": {
+        "savings": true,
+        "checking": false,
+        "salary": true,
+        "fixed_deposits": 0,
+        "recurring_deposits": 0
+      },
+      "loans": [
+        {
+          "type": "Car Loan",
+          "amount": 500000,
+          "emi": 12000,
+          "status": "Active"
+        }
+      ],
+      "credit_cards": [
+        {
+          "type": "Visa Platinum",
+          "limit": 200000,
+          "usage": [45000, 50000, 48000],
+          "due_date": "2025-03-25",
+          "late_payments": 0
+        }
+      ],
+      "investments": {
+        "mutual_funds": [],
+        "stocks": [],
+        "bonds": [19000, 20000, 21000],
+        "real_estate": [],
+        "retirement_savings": [45000]
+      },
+      "insurance": {
+        "life": false,
+        "health": true,
+        "auto": true,
+        "travel": false
+      }
+    },
+    "DigitalBanking": {
+      "preferred_channels": ["Mobile Banking", "UPI", "Internet Banking"]
+    }
+  }
+  

