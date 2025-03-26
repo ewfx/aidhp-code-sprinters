@@ -13,19 +13,33 @@
 
 ---
 
-## 🎯 Introduction
-Our approach to personalisation is based on following mantra *data + interactions = recomendations + actionable insights* . Tradional systems fail to understand contextual relationships and suffers from cold-start problem. Hence We utilised Large Language Models to build scalable personalisation engines. Explainability is kept in the core of the system adding reasoning explanations behing each product/service we recommends to our banking customers.
-Why choose us ?
-1. Recommendations for You
-Get personalized financial product suggestions tailored to your spending habits, transactions and financial profile ensuring you make the best investment and savings decisions.
-2. For the People You Love
-Receive curated financial recommendations for your spouse, parents, or children using relationship-based insights and advanced graph-based TF-IDF models.
-3. Health Care Services
-Discover the best available healthcare services and financial plans based on your profile, helping you make informed medical and insurance decisions.
-4. Conversational Search Enginer
-Ask about any financial product, and our Fargo AI will instantly analyze your needs to provide smart, relevant recommendations in a conversational manner.
-5. Boost outreach with AI-driven recommendations
-Analyze social media data to deliver personalized product suggestions and empower customer service for impactful engagement.
+### 🎯 Introduction
+## Our Approach to Personalization  
+We follow a simple yet powerful mantra:  
+
+**Data + Interactions = Recommendations + Actionable Insights**  
+
+Traditional systems struggle with contextual relationships and suffer from the cold-start problem. To overcome this, we leverage **Large Language Models (LLMs)** to build scalable personalization engines. **Explainability** is at the core of our system, providing reasoning behind every product or service recommendation for our banking customers.  
+
+---
+
+## Why Choose Us?  
+
+### 1. Recommendations for You  
+Get **personalized financial product suggestions** tailored to your **spending habits, transactions, and financial profile**, ensuring you make the best investment and savings decisions.  
+
+### 2. For the People You Love  
+Receive **curated financial recommendations** for your **spouse, parents, or children** using **relationship-based insights** and **advanced graph-based TF-IDF models**.  
+
+### 3. Healthcare Services  
+Discover the **best available healthcare services and financial plans** based on your profile, helping you make informed **medical and insurance decisions**.  
+
+### 4. Conversational Search Engine  
+Ask about any financial product, and our **Fargo AI** will instantly analyze your needs to provide **smart, relevant recommendations** in a conversational manner.  
+
+### 5. Boost Outreach with AI-Driven Recommendations  
+Analyze **social media data** to deliver **personalized product suggestions** and **empower customer service** for impactful engagement.  
+
 
 
 ## 🎥 Demo
