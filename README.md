@@ -19,7 +19,9 @@ We follow a simple yet powerful mantra:
 
 **Data + Interactions = Recommendations + Actionable Insights**  
 
-Traditional systems struggle with contextual relationships and suffer from the cold-start problem. To overcome this, we leverage **Large Language Models (LLMs)** to build scalable personalization engines.**Explainability** is at the core of our system, providing clear, data-driven reasoning behind every product or service recommendation for our banking customers. Major computational tasks are offloaded as scheduled jobs, running periodically outside business hours to enhance reliability and minimize latency.  
+Traditional systems struggle with contextual relationships and suffer from the cold-start problem. To overcome this, we leverage **Large Language Models (LLMs)** to build scalable personalization engines.
+**Explainability** is at the core of our system, providing clear, data-driven reasoning behind every product or service recommendation for our banking customers.
+Major computational tasks are offloaded as scheduled jobs, running periodically outside business hours to enhance reliability and minimize latency.  
 
 ---
 ## 🎥 Demo
@@ -51,7 +53,44 @@ Ask about any financial product, and our **Fargo AI** will instantly analyze you
 Analyze **social media data** to deliver **personalized product suggestions** and **empower customer service** for impactful engagement. 
 
 ## 🛠️ How We Built It
-Briefly outline the technologies, frameworks, and tools used in development.
+### Data Sourcing Layer  
+We collect data from multiple sources, including:  
+
+- **Customer Information Profile (CIP)**  
+- **KYC Documents**  
+- **Voluntary Disclosures**  
+- **Social Media Campaigns**  
+
+Feature engineering is applied to extract relevant insights from the data warehouse, which are then stored in the application database.  
+
+### Data Computation Layer  
+At this stage, we:  
+
+- **Generate linguistic constructs**  
+- **Perform vectorization and embedding creation**  
+- **Compute scoring and ranking** based on user and service data  
+
+This ensures **highly relevant and personalized recommendations**.  
+ 
+### Algorithmic Implementation  
+We utilize a combination of advanced techniques, including:  
+
+- **TF-IDF Vectorization** for relevance scoring  
+- **Graph Modeling** to identify family relationships  
+- **Intent Classification** for understanding user queries  
+- **Embedding Search & Ranking** for precise recommendations  
+- **Reasoning & Explanations** to enhance transparency  
+- **LLM Integration** for intelligent, context-aware interactions
+  
+### Slave Server Implementation  
+To enhance social media campaigns and outreach, we deploy a **dedicated server** that:  
+
+- **Receives real-time campaign data**  
+- **Queues and processes data in batches**  
+- **Generates tailored financial service and product recommendations**  
+
+This approach ensures **optimized customer engagement** and **higher outreach effectiveness**.  
+
 
 ## 🚧 Challenges We Faced
 Describe the major technical or non-technical challenges your team encountered.
