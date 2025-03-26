@@ -93,28 +93,50 @@ This approach ensures **optimized customer engagement** and **higher outreach ef
 
 
 ## 🚧 Challenges We Faced
-Describe the major technical or non-technical challenges your team encountered.
+### Data Modeling Challenges  
+One of the major challenges was **data modeling**, given the vast pool of data from both **customers** and **banking financial catalogs**. To address this, we:  
+
+- **Identified relevant fields** to ensure meaningful insights  
+- **Created synthetic data** to simulate real-time scenarios  
+- **Modeled relationships using Graph-based structures**  
+- **Designed a NoSQL database** for scalability and flexibility  
+
+This approach enabled **efficient data handling and enhanced recommendation accuracy**.  
+ 
 
 ## 🏃 How to Run
 1. Clone the repository  
    ```sh
-   git clone https://github.com/your-repo.git
+   git clone https://github.com/your-repo.git](https://github.com/ewfx/aidhp-code-sprinters.git
    ```
 2. Install dependencies  
    ```sh
-   npm install  # or pip install -r requirements.txt (for Python)
+   pip install -r requirements.txt
    ```
-3. Run the project  
+
+3. Run Master server
    ```sh
-   npm start  # or python app.py
+   python app.py
+   ```
+4. Run slave server
+   ```sh
+   cd slave-server 
+   ```
+   ```sh
+   python app.py 
+   ```
+
+4. Make sure to create .env file with open-ai key
+   ```sh
+   OPENAI_API_KEY = <api-key>
    ```
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
-- 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+- 🔹 Frontend: HTML/CSS/JavaScript
+- 🔹 Backend: Flask 
+- 🔹 Database: MongoDB
+- 🔹 Others: Sentence Transformers | Open-ai as LLM service
 
 ## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
+- **Murali** - [GitHub](https://github.com/MuraliB123) | [LinkedIn](https://www.linkedin.com/in/muralib1729)  
 - **Teammate 2** - [GitHub](#) | [LinkedIn](#)
