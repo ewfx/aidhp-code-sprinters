@@ -52,7 +52,7 @@ Analyze **social media data** to deliver **personalized product suggestions** an
 
 ## 🛠️ How We Built It
 ### Data Sourcing Layer  
-We collect data from multiple sources, including:  
+We collect data from multiple sources,including:  
 
 - **Customer Information Profile (CIP)**  
 - **KYC Documents**  
