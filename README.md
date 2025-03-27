@@ -25,11 +25,9 @@ Major computational tasks are offloaded as scheduled jobs, running periodically 
 
 ---
 ## 🎥 Demo
-🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
-🖼️ Screenshots:
+[Video Demo](https://drive.google.com/file/d/1SHHJPrF3cci9GzqY4Z8p1HhokKAWsVv8/view?usp=sharing)
 
-![Screenshot 1](link-to-image)
+
 
 ## 💡 Inspiration
 LLMs have transformed application development, shifting from **keyword-based search to contextual search**, unlocking new ways to solve problems. A key focus area is **customer engagement**, which directly drives business growth. However, this shift brings challenges such as **scalability, explainability, and real-time processing**. Our goal is to embrace this evolution while proactively addressing these challenges to deliver innovative, efficient solutions.  
@@ -54,7 +52,7 @@ Analyze **social media data** to deliver **personalized product suggestions** an
 
 ## 🛠️ How We Built It
 ### Data Sourcing Layer  
-We collect data from multiple sources, including:  
+We collect data from multiple sources,including:  
 
 - **Customer Information Profile (CIP)**  
 - **KYC Documents**  
@@ -139,4 +137,6 @@ This approach enabled **efficient data handling and enhanced recommendation accu
 
 ## 👥 Team
 - **Murali** - [GitHub](https://github.com/MuraliB123) | [LinkedIn](https://www.linkedin.com/in/muralib1729)  
-- **Poojaa S** - [GitHub](#) | [LinkedIn](#)
+- **Poojaa S** - [GitHub](https://github.com/poojaa1908) | [LinkedIn](https://www.linkedin.com/in/poojaa-s)
+- **Sawthisri** - [Github](https://github.com/SwathishriJL) | [LinkedIn](https://www.linkedin.com/in/swathishri-jaisankar/)
+- **Nithin** - [Linkedin](https://www.linkedin.com/in/nithin-srivatsan-0a885b236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
