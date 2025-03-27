@@ -4,50 +4,6 @@ function formatKey(key) {
     return key.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const cardRow = document.querySelector(".card-row");
-    const leftArrow = document.querySelector(".left-arrow"); // Update with correct class
-    const rightArrow = document.querySelector(".right-arrow"); // Update with correct class
-
-    if (cardRow && leftArrow && rightArrow) {
-        leftArrow.addEventListener("click", function () {
-            cardRow.scrollBy({ left: -300, behavior: "smooth" }); // Adjust scroll amount if needed
-        });
-
-        rightArrow.addEventListener("click", function () {
-            cardRow.scrollBy({ left: 300, behavior: "smooth" }); // Adjust scroll amount if needed
-        });
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const cardRow = document.querySelector(".card-row");
-    if (cardRow) {
-        cardRow.style.overflowX = "hidden";
-        cardRow.style.whiteSpace = "nowrap"; // Prevents items from wrapping
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const recommendationContainer = document.getElementById("recommendation-container");
-    const leftArrow = document.querySelector(".left-btn");
-    const rightArrow = document.querySelector(".right-btn");
-
-    if (recommendationContainer && leftArrow && rightArrow) {
-        leftArrow.addEventListener("click", function () {
-            recommendationContainer.scrollBy({ left: -300, behavior: "smooth" });
-        });
-
-        rightArrow.addEventListener("click", function () {
-            recommendationContainer.scrollBy({ left: 300, behavior: "smooth" });
-        });
-    } else {
-        console.error("❌ Arrow buttons or container not found.");
-    }
-});
-
-
 document.addEventListener("DOMContentLoaded", async () => {
     if (window.location.pathname === "/") {
         console.log("Login page detected. Setting up login function.");
@@ -63,15 +19,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     const closeChat = document.getElementById("close-chat");
     const profilePic = document.getElementById("profile-pic");
     const dropdown = document.getElementById("profile-dropdown");
-    const editButton = document.getElementById("edit-profile");
-    const saveButton = document.getElementById("save-profile");
     const userName = document.getElementById("user-name");
     const userContact = document.getElementById("user-contact");
     const userId = document.getElementById("user-id");
     const userAddress = document.getElementById("user-address");
     const userContent = document.getElementById("user-content");
     const closeButton = document.getElementById("close-profile");
-    const logoutButton = document.getElementById("logout-btn")
+    const logoutButton = document.getElementById("logout-btn");
     const modal = document.getElementById("custom-modal");
     const modalTitle = document.getElementById("modal-title");
     const modalDescription = document.getElementById("modal-description");
@@ -98,8 +52,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     
-
-    
     if (profilePic && dropdown) {
         profilePic.addEventListener("click", () => dropdown.classList.toggle("show"));
         document.addEventListener("click", (event) => {
@@ -116,52 +68,111 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Logout button functionality
+    // Logout Functionality
     logoutButton.addEventListener("click", function () {
-        window.location.href = "/logout"; // Redirect to Flask logout route
+        window.location.href = "/logout";
     });
-    
 
     // Load Financial Products
     try {
         const response = await fetch("/home");
+        console.log("Response received:", response);
+    
         if (!response.ok) throw new Error("User not authenticated");
-        
+    
+        // Parse HTML response
         const text = await response.text();
         console.log("HTML response successfully parsed.");
+    
         const parser = new DOMParser();
         const doc = parser.parseFromString(text, "text/html");
-        const recommendationDataElement = doc.getElementById("recommendation-data");
+    
+        // Extract user recommendations
+        const userRecElement = doc.getElementById("user-recommendation-data");
+        if (!userRecElement) throw new Error("Element 'user-recommendation-data' not found.");
+        const userRecommendations = JSON.parse(userRecElement.textContent);
+    
+        // Extract relationship-based recommendations
+        const relationshipRecElement = doc.getElementById("relationship-recommendation-data");
+        if (!relationshipRecElement) throw new Error("Element 'relationship-recommendation-data' not found.");
+        const relationshipRecommendations = JSON.parse(relationshipRecElement.textContent);
 
-        if (!recommendationDataElement) {
-            throw new Error("❌ Element with ID 'recommendation-data' not found.");
+         // Extract relationship-based recommendations
+         const healthcareRecElement = doc.getElementById("healthcare-recommendation-data");
+         if (!healthcareRecElement) throw new Error("Element 'healthcare-recommendation-data' not found.");
+         const healthcareRecommendations = JSON.parse(healthcareRecElement.textContent);
+    
+        console.log("User Recommendations:", userRecommendations);
+        console.log("Relationship Recommendations:", relationshipRecommendations);
+        console.log("Healthcare Recommendations:", healthcareRecommendations);
+        
+        // Populate "Recommendations for You"
+        const userRecContainer = document.getElementById("recommendation-container");
+        userRecContainer.innerHTML = ""; 
+    
+        const userProducts = Object.values(userRecommendations).flat();
+        if (userProducts.length === 0) {
+            console.warn("No recommendations found.");
+            userRecContainer.innerHTML = "<p>No recommendations available at this time.</p>";
+        } else {
+            const userProductRow = document.createElement("div");
+            userProductRow.classList.add("card-row");
+    
+            userProducts.forEach((product) => {
+                console.log("Adding User Product:", product.name);
+                const card = createCard(product);
+                userProductRow.appendChild(card);
+            });
+    
+            userRecContainer.appendChild(userProductRow);
+        }
+    
+        const relationshipRecContainer = document.getElementById("love-container");
+        relationshipRecContainer.innerHTML = ""; 
+    
+        const relationshipProducts = Object.values(relationshipRecommendations).flat();
+        if (relationshipProducts.length === 0) {
+            console.warn("No relationship recommendations found.");
+            relationshipRecContainer.innerHTML = "<p>No recommendations available for your loved ones at this time.</p>";
+        } else {
+            const relationshipProductRow = document.createElement("div");
+            relationshipProductRow.classList.add("card-row");
+    
+            relationshipProducts.forEach((product) => {
+                console.log("Adding Relationship Product:", product.name);
+                const card = createCard(product);
+                relationshipProductRow.appendChild(card);
+            });
+    
+            relationshipRecContainer.appendChild(relationshipProductRow);
         }
 
-        const recommendations = JSON.parse(recommendationDataElement.textContent);
-        const recommendationContainer = document.getElementById("recommendation-container");
-        recommendationContainer.innerHTML = "";
-
-        const allProducts = Object.values(recommendations).flat();
-        if (allProducts.length === 0) {
-            recommendationContainer.innerHTML = "<p>No recommendations available at this time.</p>";
-            return;
+        const healthcareRecContainer = document.getElementById("healthcare-container");
+        healthcareRecContainer.innerHTML = ""; 
+    
+        const healthcareProducts = Object.values(healthcareRecommendations).flat();
+        if (healthcareProducts.length === 0) {
+            console.warn("No relationship recommendations found.");
+            healthcareRecContainer.innerHTML = "<p>No recommendations available for your loved ones at this time.</p>";
+        } else {
+            const healthcareProductRow = document.createElement("div");
+            healthcareProductRow.classList.add("card-row");
+    
+            healthcareProducts.forEach((product) => {
+                console.log("Adding Relationship Product:", product.name);
+                const card = createServicesCard(product);
+                healthcareProductRow.appendChild(card);
+            });
+    
+            healthcareRecContainer.appendChild(healthcareProductRow);
         }
-
-        allProducts.forEach((product) => {
-            const card = createCard(product);
-            recommendationContainer.appendChild(card);
-        });
-
-        const loveContainer = document.getElementById("love-container");
-        loveContainer.innerHTML = "";
-        allProducts.slice(0, 5).forEach((product) => {
-            const card = createCard(product);
-            loveContainer.appendChild(card);
-        });
+    
+        console.log("Recommendations Loaded Successfully!");
+    
     } catch (error) {
-        console.error("🚨 Error loading financial products:", error);
+        console.error("Error loading financial products:", error);
     }
-
+    
     // Function to Create a Card
     function createCard(product) {
         const card = document.createElement("div");
@@ -172,45 +183,39 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p><strong>Eligible:</strong> ${product.eligible_customers || "N/A"}</p>
             <p class="modal-trigger"><strong>Click here for more info!</strong></p>
         `;
-    
-        // Add event listener to open modal when clicking "Click here for more info!"
-        const trigger = card.querySelector(".modal-trigger");
-        trigger.addEventListener("click", function () {
+
+        card.querySelector(".modal-trigger").addEventListener("click", function () {
             modalTitle.textContent = product.name;
-            // Convert all key-value pairs into HTML content
             let descriptionHTML = `<p>${product.about}</p>`;
             for (const [key, value] of Object.entries(product)) {
-                if (key == 'about' || key == 'name') continue;
-                else if (value) {  // Only show non-null values
+                if (key !== "about" && key !== "name" && value && key !=="category") {
                     descriptionHTML += `<p><strong>${formatKey(key)}:</strong> ${value}</p>`;
                 }
             }
-
-            modalDescription.innerHTML = descriptionHTML; // Set modal content
-
-            modal.style.display = "flex"; // Show modal
+            modalDescription.innerHTML = descriptionHTML;
+            modal.style.display = "flex";
         });
-    
+
         return card;
     }
-
-    // Close Modal on Button Click
-    closeModalButton.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    // Close Modal on 'X' Click
-    closeIcon.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    // Close Modal on Outside Click
-    window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
     
+    // Function to Create a Card
+    function createServicesCard(product) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+            <h3>${product.service}</h3>
+            <p><strong>Reason:</strong> ${product.reason}</p>
+        `;
+        return card;
+    }
+    
+    // Close Modal Handlers
+    closeModalButton.addEventListener("click", () => (modal.style.display = "none"));
+    closeIcon.addEventListener("click", () => (modal.style.display = "none"));
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) modal.style.display = "none";
+    });
 
     // Toggle chat window
     chatToggle.addEventListener("click", () => {

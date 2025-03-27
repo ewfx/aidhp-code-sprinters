@@ -14,25 +14,7 @@ body {
 /* Main Content */
 .content {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-
-.about-section {
-    margin-top: 480px;
-}
-
-.card-row {
-    overflow-x: auto; 
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  .card-row::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
-  
 
 /* Floating Chat Button */
 .chat-toggle {
@@ -195,7 +177,7 @@ body {
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #E5DECF;
+    background-color: #e5decf;
     color: black;
     margin: 0;
     padding: 0;
@@ -213,10 +195,6 @@ body {
     width: 100%;
     top: 0;
     z-index: 100;
-}
-
-.navbar h2 {
-    align-self: flex-start;
 }
 
 .profile-container {
@@ -253,6 +231,148 @@ body {
 /* Content Section */
 .content {
     padding: 100px 20px 20px;
+    text-align: center;
+}
+
+.about-section {
+    margin-top: 1000px;
+    padding: 24px;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Close Button */
+.close-modal {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 15px 0;
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+/* Close Button */
+#close-modal {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Close Button Hover */
+#close-modal:hover {
+    background-color: #c20811;
+}
+
+/* Hover Effect for Trigger */
+.card p.modal-trigger {
+    cursor: pointer;
+    color: black;
+}
+
+.card p.modal-trigger:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section Container */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 20px;
+    padding: 40px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Container: Application Description */
+.hero-text {
+    width: 50%;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 32px;
+    color: #e50914;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Right Container: Logo */
+.hero-image {
+    width: 40%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 10px;
+}
+
+/* Get Started Button */
+.get-started-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #900;
 }
 
 /* Section Titles */
@@ -263,9 +383,8 @@ body {
     border-bottom: 2px solid red;
     display: inline-block;
     position: relative;
-    align-self: flex-start;
-    margin: 25px;
 }
+
 .card-container {
     display: flex;
     overflow-x: auto; /* Enables horizontal scrolling */
@@ -291,7 +410,12 @@ body {
     white-space: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth; /* Smooth scrolling effect */
+    scrollbar-width: none; /* Firefox */
 }
+  
+  .card-row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
 
 .scroll-btn {
     position: absolute;
@@ -395,15 +519,12 @@ body {
     margin-bottom: 10px;
 }
 
-
-
 /* Profile Dropdown - Updated */
 #profile-dropdown {
     position: absolute;
     top: 50px; /* Adjust as needed */
     right: 0;
-    background-color: #e50914;
-    border: 2px solid #F1B80B;
+    background: #e50914;
     color: white;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -456,36 +577,6 @@ body {
     margin: 10px 0;
 }
 
-/* Edit Profile & Save Buttons */
-#edit-profile,
-#save-profile {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-#edit-profile {
-    background-color: #007bff;
-    color: white;
-}
-
-#edit-profile:hover {
-    background-color: #0056b3;
-}
-
-#save-profile {
-    background-color: #28a745;
-    color: white;
-}
-
-#save-profile:hover {
-    background-color: #1e7e34;
-}
 
 /* Navbar */
 .navbar {
@@ -496,7 +587,6 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 100;
 }
 
 /* Profile Container */
@@ -581,138 +671,3 @@ button {
     justify-content: center;
 }
 
-/* Modal Background */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fff;
-    color: black;
-    padding: 20px;
-    border-radius: 8px;
-    width: 50%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Modal Header */
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-}
-
-/* Close Button */
-.close-modal {
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Modal Body */
-.modal-body {
-    padding: 15px 0;
-}
-
-/* Modal Footer */
-.modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 10px;
-}
-
-/* Close Button */
-#close-modal {
-    background-color: #e50914;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Close Button Hover */
-#close-modal:hover {
-    background-color: #c20811;
-}
-
-/* Hover Effect for Trigger */
-.card p.modal-trigger {
-    cursor: pointer;
-    color: black;
-}
-
-.card p.modal-trigger:hover {
-    text-decoration: underline;
-}
-
-/* Hero Section Container */
-.hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    margin: 20px;
-    padding: 40px;
-    background: #f8f8f8;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Left Container: Application Description */
-.hero-text {
-    width: 40%;
-    padding: 20px;
-}
-
-.hero-text h1 {
-    font-size: 32px;
-    color: #e50914;
-}
-
-.hero-text p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Right Container: Logo */
-.hero-image {
-    width: 50%;
-    text-align: center;
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 10px;
-}
-
-/* Get Started Button */
-.get-started-btn {
-    background-color: #e50914;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.get-started-btn:hover {
-    background-color: #900;
-}

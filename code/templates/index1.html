@@ -7,23 +7,27 @@
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <h2>Code Sprinters</h2>
-        <div class="profile-container">
-            <img src="static/default-profile.jpeg" alt="Profile" class="profile-pic" id="profile-pic">
-            <div class="dropdown hidden" id="profile-dropdown">
-                <div class="dropdown-header">
-                    <h3 style="text-align: center;">Profile</h3>
-                    <button id="close-profile" class="close-btn">✖</button>
-                </div>
-                <p><strong>Name:</strong> <span id="user-name">John Doe</span></p>
-                <p><strong>Contact:</strong> <span id="user-contact">johndoe@example.com</span></p>
-                <p><strong>Address:</strong> <span id="user-address">123 Main St, City</span></p>
-                <button class="logout-btn" id="logout-btn">Logout</button>
-            </div>
-        </div>
-    </nav>
 
+   <!-- Navbar with Profile Picture -->
+<!-- Navbar with Profile Picture -->
+<nav class="navbar">
+    <h2>Code Sprinters</h2>
+    <div class="profile-container">
+        <img src="static/default-profile.jpeg" alt="Profile" class="profile-pic" id="profile-pic">
+        <div class="dropdown hidden" id="profile-dropdown">
+            <div class="dropdown-header">
+                <h3 style="text-align: center;">Profile</h3>
+                <button id="close-profile" class="close-btn">✖</button>
+            </div>
+            <p><strong>Name:</strong> <span id="user-name">John Doe</span></p>
+            <p><strong>Contact:</strong> <span id="user-contact">johndoe@example.com</span></p>
+            <p><strong>Address:</strong> <span id="user-address">123 Main St, City</span></p>
+            <button class="logout-btn" id="logout-btn">Logout</button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
     <div class="content">
         <div class="about-section">
             <!-- Hero Section with Two Containers -->
@@ -47,40 +51,57 @@
                 </div>
             </center>
         </div>
-
-        
+        <!-- First Row - Recommendations for User -->
         <h2 class="section-title">Recommended For You</h2>
         <div class="carousel-container">
             <button class="scroll-btn left-btn">❮</button>
             <div class="card-row" id="recommendation-container"></div>
             <button class="scroll-btn right-btn">❯</button>
         </div>
-        
+
+        <!-- Hidden Div to store User Recommendations (to be parsed by JavaScript) -->
+        <div id="user-recommendation-data" style="display: none;">{{ user_recommendations | tojson | safe }}</div>
+
         <h2 class="section-title">For the People You Love</h2>
         <div class="carousel-container">
             <button class="scroll-btn left-btn">❮</button>
             <div class="card-row" id="love-container"></div>
             <button class="scroll-btn right-btn">❯</button>
         </div>
+
+        <!-- Hidden Div to store Relationship-Based Recommendations -->
+        <div id="relationship-recommendation-data" style="display: none;">{{ relationship_recommendations | tojson | safe }}</div>
+
+        <h2 class="section-title">HealthCare Services for You</h2>
+        <div class="carousel-container">
+            <button class="scroll-btn left-btn">❮</button>
+            <div class="card-row" id="healthcare-container"></div>
+            <button class="scroll-btn right-btn">❯</button>
+        </div>
+
+        <!-- Hidden Div to store Relationship-Based Recommendations -->
+        <div id="healthcare-recommendation-data" style="display: none;">{{ healthcare_recommendations | tojson | safe }}</div>
     </div>
 
-    <button id="chat-toggle" class="chat-toggle">💬</button>
-    <div class="chat-container hidden" id="chat-container">
-        <div class="chat-header">
-            <span>Fargo - Your Conversational AI</span>
-            <button id="close-chat">✖</button>
-        </div>
-        <div id="chat-box" class="chat-box">
-            <div class="message bot-message">Hello! How can I assist you today?</div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Type your message..." />
-            <button id="send-btn">Send</button>
-        </div>
-    </div>
+     <!-- Floating Chat Button -->
+     <button id="chat-toggle" class="chat-toggle">💬</button>
 
+     <!-- Chat Container (Initially Hidden) -->
+     <div class="chat-container hidden" id="chat-container">
+         <div class="chat-header">
+             <span>Fargo - Your Conversational AI</span>
+             <button id="close-chat">✖</button>
+         </div>
+         <div id="chat-box" class="chat-box">
+             <div class="message bot-message">Hello! How can I assist you today?</div>
+         </div>
+         <div class="chat-input">
+             <input type="text" id="user-input" placeholder="Type your message..." />
+             <button id="send-btn">Send</button>
+         </div>
+     </div>
 
-    <!-- Custom Modal -->
+     <!-- Custom Modal -->
     <div id="custom-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -96,7 +117,18 @@
         </div>
     </div>
 
-    <script id="recommendation-data" type="application/json">{{ recommendations | tojson }}</script>
+     <script id="user-recommendation-data" type="application/json">
+        {{ user_recommendations | tojson | safe if user_recommendations else '{}' }}
+    </script>
+    
+    <script id="relationship-recommendation-data" type="application/json">
+        {{ relationship_recommendations | tojson | safe if relationship_recommendations else '{}' }}
+    </script>
+
+    <script id="heathcare-recommendation-data" type="application/json">
+        {{ healthcare_recommendations | tojson | safe if healthcare_recommendations else '{}' }}
+    </script>
+    
     <script src="static/script.js"></script>
 </body>
 </html>
